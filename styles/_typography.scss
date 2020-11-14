@@ -1,0 +1,96 @@
+@import "./_color.scss";
+@import "./_break-points.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;600;700&display=swap');
+
+h1{
+  font-size: 40px;
+  line-height: 52px;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  color:$primary-color;
+  @include bp(sm-max) {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 48px;
+  margin: 0;
+  color:$primary-color;
+  font-family: 'Varta', sans-serif;
+  font-weight:700;
+  @include bp(sm-max) {
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 44px;
+  margin: 0;
+  color:$primary-color;
+  font-family: 'Roboto', sans-serif;
+  @include bp(sm-max) {
+    font-size: 26px;
+  }
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 40px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  color:$primary-color;
+  @include bp(sm-max) {
+    font-size: 24px;
+  }
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 36px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  color:$primary-color;
+  @include bp(sm-max) {
+    font-size: 18px;
+  }
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  color:$primary-color;
+}
+
+p {
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 0 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  color:$black;
+  letter-spacing: 1.7;
+  &:last-of-type {
+    margin: 0;
+  }
+  @include bp(sm-max) {
+    font-size: 16px;
+  }
+}
+
+a{
+color:$blue-color;
+font-family: 'Roboto', sans-serif;
+font-weight:400;
+cursor:pointer;
+letter-spacing: 1.7;
+}

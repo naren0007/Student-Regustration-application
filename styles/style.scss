@@ -1,0 +1,279 @@
+@import "./_color";
+@import "./_break-points";
+@import "./_typography";
+@import "./_form-elements";
+@import "./_header";
+@import "./common";
+
+.businessCourses {
+	border-bottom: 2px solid $smokeWhite;
+	padding-bottom: 20px;
+
+	.courseItem {
+		text-align: center;
+		border-right: 2px solid $smokeWhite;
+
+		&:last-child {
+			border: none;
+		}
+	}
+}
+
+.bannerContainer {
+	background: url("../assets/images/bannerImage.png");
+	min-height: 100vh;
+	background-size: cover;
+
+	.bannerInner {
+		background: rgba(23, 50, 70, 0.651);
+		width: 100%;
+		min-height: 100vh;
+		padding-top: 100px;
+
+		.formBorder {
+			position: relative;
+
+			&:before {
+				@include bp(xl-min) {
+					content: "";
+					position: absolute;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					left: -300px;
+					border: 1px solid $white;
+					border-left: 0;
+				}
+			}
+			.formContainer {
+				background: $white;
+				padding: 20px 35px;
+				h5 {
+					color: $primary-color;
+					border-bottom: 2px solid $primary-color;
+				}
+				a {
+					cursor: pointer;
+					color: $dark-gray-color;
+					font-size: 20px;
+					opacity: 0.7;
+				}
+
+				.form-check-label {
+					font-size: 14px;
+				}
+			}
+		}
+		.bannerContent {
+			position: relative;
+			h1 {
+				@include bp(xl-min) {
+					font-size: 50px !important;
+					line-height: 65px;
+				}
+				p {
+					@include bp(xl-min) {
+						font-size: 30px !important;
+						line-height: 70px;
+					}
+				}
+			}
+
+			&:before {
+				@include bp(xl-min) {
+					content: "";
+					position: absolute;
+					top: -117px;
+					bottom: 0;
+					height: 120px;
+					width: 1px;
+					background: white;
+					right: 254px;
+				}
+			}
+
+			&:after {
+				@include bp(xl-min) {
+					content: "";
+					position: absolute;
+					bottom: -117.5px;
+					height: 111px;
+					width: 1px;
+					background: white;
+					right: 254px;
+				}
+			}
+		}
+	}
+}
+
+.scholarshipSection {
+	.scholarshipitem {
+		padding: 20px;
+		&:hover {
+			box-shadow: 0 0 46px 0 rgba(0, 0, 0, 0.1);
+			background-color: $white;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		h5 {
+			span {
+				color: rgb(0, 128, 255);
+			}
+		}
+	}
+	.activeScholarship {
+		box-shadow: 0 0 46px 0 rgba(0, 0, 0, 0.1);
+		background-color: $white;
+	}
+}
+
+.courseEligibilityContainer {
+	background: $smokeWhite;
+
+	.innerContainer {
+		max-width: 650px;
+		margin: auto;
+		position: relative;
+	}
+
+	.eligibilityContainer {
+		margin: auto;
+		padding: 20px;
+		border-top-right-radius: 30px;
+		border-top-left-radius: 30px;
+		background: $white;
+		min-height: 350px;
+		box-shadow: 0 0 46px 0 rgba(0, 0, 0, 0.1);
+
+		@include bp(md-min) {
+			padding: 50px;
+		}
+	}
+
+	.courseNameContainer {
+		.courseName {
+			opacity: 0.8;
+			cursor: pointer;
+			z-index: 9999999;
+			text-align: center;
+			@include bp(xl-min) {
+				position: absolute;
+			}
+			&:before {
+				content: "";
+				height: 3px;
+				background: $white;
+				position: absolute;
+				top: 40%;
+				transform: translateY(-50%);
+				z-index: -1;
+			}
+			&:first-child {
+				top: 30px;
+				left: -200px;
+
+				&:before {
+					content: "";
+					width: 196px;
+					left: 20px;
+				}
+			}
+			&:nth-child(2) {
+				top: 230px;
+				left: -250px;
+				&:before {
+					content: "";
+					width: 240px;
+					left: 22px;
+				}
+			}
+			&:nth-child(3) {
+				top: 30px;
+				right: -200px;
+				&:before {
+					content: "";
+					width: 200px;
+					right: 22px;
+				}
+			}
+			&:last-child {
+				top: 230px;
+				right: -250px;
+				&:before {
+					content: "";
+					width: 240px;
+					right: 22px;
+				}
+			}
+		}
+		.activeCourse {
+			opacity: 1;
+			cursor: auto;
+		}
+		.courseImg {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100px;
+			height: 100px;
+			background: $white;
+			border-radius: 50%;
+			margin: auto;
+
+			@include bp(md-max) {
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
+}
+
+// feedback testimonial
+.studentFeedback {
+	.studentFeedbackSlider {
+		.studentFeedbackItem {
+			padding: 20px;
+		}
+	}
+}
+// feedback testimonial end
+
+// video container
+.videoContainer {
+	.videoItem {
+		padding: 15px;
+		.arrowItem {
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			background: rgba(0, 0, 0, 0.735);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			cursor: pointer;
+			transition: 0.5s;
+
+			&:hover {
+				transform: translate(-50%, -50%) scale(1.1);
+			}
+		}
+	}
+
+	.activeVideo {
+		box-shadow: 0 0 46px 0 rgba(0, 0, 0, 0.1);
+		background-color: $white;
+	}
+}
+// video container end
+
+// footer container
+.footerContainer {
+	padding: 10px 0;
+	background: $light-gray-color;
+}
+// footer container end

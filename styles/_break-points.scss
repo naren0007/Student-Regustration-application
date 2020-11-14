@@ -1,0 +1,43 @@
+
+//Break points
+@mixin bp($point) {
+  $sm-max: "(max-width: 767px)";
+  $sm-min: "(min-width: 767px)";
+  $md-max: "(max-width: 991px)";
+  $md-min: "(min-width: 991px)";
+  $lg-max: "(max-width: 1199px)";
+  $xl-max: "(max-width: 1200px)";
+  $xl-min: "(min-width: 1200px)";
+
+
+  @if $point==sm-max {
+    @media #{$sm-max} {
+      @content;
+    }
+  }@else if $point==md-max {
+    @media #{$md-max} {
+      @content;
+    }
+  }@else if $point==lg-max {
+    @media #{$lg-max} {
+      @content;
+    }
+  } @else if $point==xl-max{
+    @media #{$xl-max} {
+      @content;
+    }
+  }@else if $point==xl-min{
+    @media #{$xl-min} {
+      @content;
+    }
+  }@else if $point==sm-min{
+    @media #{$sm-min} {
+      @content;
+    }
+  }
+  @else if $point==md-min{
+    @media #{$md-min} {
+      @content;
+    }
+  }
+}
